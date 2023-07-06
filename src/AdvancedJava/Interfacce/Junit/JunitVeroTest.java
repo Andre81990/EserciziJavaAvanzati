@@ -1,29 +1,17 @@
 package AdvancedJava.Interfacce.Junit;
 
-/*
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-public class JunitVeroTest {
-
-
-    {
-
-@Test
-        public void test1molt() {
-//nome classe.nome metodo
-        int res = JunitVero.Substraction(10, 2);
-        Assertions.assertEquals(5,5);
-
-    }
+import static org.junit.jupiter.api.Assertions.*;
 
 
-        @Test
-        public void test2molt() {
-        int mol=JunitVero.Multipication(20,5);
-        Assertions.assertEquals(4,6);
 
-    }
+
+
+class JunitVeroTest {
+
+
 
 
         @Test
@@ -42,6 +30,24 @@ public class JunitVeroTest {
         Assertions.assertEquals(34,24);
 
     }
+
+
+
+    @Test
+    public void test1molt() {
+//nome classe.nome metodo
+        int res = JunitVero.Substraction(10, 2);
+        Assertions.assertEquals(5,5);
+
     }
-}
-*/
+    @Test
+    public void test2molt() {
+        int mol=JunitVero.Multipication(20,5);
+        Assertions.assertEquals(4,6);
+
+    }
+
+
+
+
+    }

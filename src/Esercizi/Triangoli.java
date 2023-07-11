@@ -61,6 +61,9 @@ public class Triangoli {
 
     public static void main(String[] args) {
 
+
+
+
 TriangoloRettangolo tria=new TriangoloRettangolo("rettangolo1",2.3,4.5,5.6);
 TriangoloRettangolo tria2=new TriangoloRettangolo("rettangolo2 ",2.6,5.8,1.7);
 

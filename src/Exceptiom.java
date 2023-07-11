@@ -22,6 +22,7 @@ public class Exceptiom {
                 //perche non mi da le altre stampe?
                 e.checkScore(200);
                 e.checkScore(34532);
+                e.checkScore(1);
 
             } catch (ArithmeticException e) {
                 //con questo messagge richiamo il throw
@@ -31,8 +32,6 @@ public class Exceptiom {
             }
         }
     }
-
-
     private void checkScore(double score)  {
         if (score>0 & score<=50.00)
         {

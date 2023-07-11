@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class SmartphonePrice implements Cloneable {
 
-
     public String priceType;
     public double priceInEuros;
 
@@ -12,20 +11,22 @@ public class SmartphonePrice implements Cloneable {
     @Override
     public SmartphonePrice clone() {
         try
-
     {
-        return (SmartphonePrice)super.clone();
-    } catch(
-    CloneNotSupportedException e)
 
+        /*
+        * a clonedSmartphonePriceviene generato utilizzandosuper.clone()
+        *  il valore restituito è un SmartphonePriceoggetto
+        * */
+        //seconda implementazione del metodo clone
+        return (SmartphonePrice)super.clone();}
+        //clonedSmartphonePrice
+
+
+        catch(CloneNotSupportedException e)
     {
         return null;
     }
-
 }
-
-
-
     //tostring
         @Override
         public String toString() {
@@ -35,9 +36,12 @@ public class SmartphonePrice implements Cloneable {
                 '}';
     }
 
-
 //equals
-
+/*
+* [usando IntelliJ] un override del equals()metodo
+*  che controlla i 2 attributi
+* per stabilire se due SmartphonePriceoggetti sono uguali
+* */
         @Override
         public boolean equals(Object o) {
         if (this == o) return true;
@@ -55,7 +59,6 @@ public class SmartphonePrice implements Cloneable {
         public int hashCode() {
         return Objects.hash(priceType, priceInEuros);
     }
-
 
 
     public SmartphonePrice(String priceType, double priceInEuros) {

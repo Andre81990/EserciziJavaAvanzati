@@ -3,14 +3,9 @@ import java.util.Scanner;
 
 public class TryCatch {
 
-
-
-
     public static void main(String[] args) {
 
-
         Scanner s = new Scanner(System.in);
-
 
         try {
             System.out.println("primo num :");
@@ -21,7 +16,7 @@ public class TryCatch {
 
             int y = s.nextInt();
 
-            int res = x / y;
+            int res=x/y;
             System.out.println("ottengo :" + res);
         } catch (ArithmeticException e) {
             System.out.println("non si puo fare");
@@ -34,6 +29,8 @@ public class TryCatch {
         {
             System.out.println("non si puo fare con la stringa");
         }
+
+
         finally {
             System.out.println("si esegue sempre, bravo hai finito il tuo try catch");
         }

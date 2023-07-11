@@ -11,9 +11,6 @@ public class JunitVero
 
     }
 
-
-
-
     public static int Substraction(int minuend, int subtrahend)
 
     {

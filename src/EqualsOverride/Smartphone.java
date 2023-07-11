@@ -5,12 +5,9 @@ import java.util.Objects;
 
 public class Smartphone implements Cloneable {
 
-
     private String brandName;
     private String modelName;
-
     private int batterymAh;
-
     public SmartphonePrice producerPrice;
     public static SmartphonePrice retailPrice;
 
@@ -18,6 +15,7 @@ public class Smartphone implements Cloneable {
     public Smartphone(String brandName, String modelName, int batterymAh,
                       SmartphonePrice producerPrice,
                       SmartphonePrice retailPrice) {
+
         this.brandName = brandName;
         this.modelName = modelName;
         this.batterymAh = batterymAh;
@@ -35,16 +33,13 @@ public class Smartphone implements Cloneable {
                 ", retailPrice=" + retailPrice +
                 '}';
     }
+    //[usando IntelliJ] un override del equals() metodo che controlla tutti i 5 attributi per stabilire se due
+// Smartphone oggetti sono uguali
 
-
-
-
-
-
-    //[usando IntelliJ] un override del equals()metodo che controlla tutti i 5 attributi per stabilire se due
-// Smartphoneoggetti sono uguali
     @Override
     public boolean equals(Object o) {
+
+        //this si riferisce all oggetto
         if (this == o) return true;
         if (!(o instanceof Smartphone that))
             return false;
@@ -56,17 +51,17 @@ public class Smartphone implements Cloneable {
                 && Objects.equals(retailPrice, that.retailPrice);
     }
 
-
     //[usando IntelliJ] un override di hashCode(),
     // usando tutti i 5 attributi
     /*
     * Tale metodo fornisce un codice hash dell’oggetto ed è
-    *  pensato per fornire supporto alla gestione delle strutture
-    *  dati
+    *  pensato per fornire supporto alla
+    * gestione delle strutture dati
     *  di tipo hash table come ad esempio java.util.Hashtable
     *
     * La sua implementazione di default sostanzialmente non
-    *  fa altro che mappare l’indirizzo dell’area di memoria
+    *  fa altro che
+    *  mappare l’indirizzo dell’area di memoria
     * dove l’oggetto è allocato con un intero (univoco).
     * */
     @Override
@@ -80,17 +75,23 @@ public class Smartphone implements Cloneable {
     public Smartphone clone() throws CloneNotSupportedException {
 
         try {
+
+            //cast
+            //implementazione del metodo clone
             Smartphone SmartphoneClonato = (Smartphone) super.clone();
 
+            //assegnamento
             SmartphoneClonato.producerPrice = producerPrice.clone();
 
             Smartphone.retailPrice = retailPrice.clone();
+
             return SmartphoneClonato;
+
         } catch //CloneNotSupportedException e
         (Exception e) {
 
-
             return null;
+
         }
     }
 }

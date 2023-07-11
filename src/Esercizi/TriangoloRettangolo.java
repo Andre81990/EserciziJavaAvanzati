@@ -58,6 +58,7 @@ public class TriangoloRettangolo {
     public double calcolaArea()
     {
         //(l1*l2)/2
+
         double area= (lunghezzaCateto1 * lunghezzaCateto2 );
 
         return area;
@@ -70,6 +71,17 @@ public class TriangoloRettangolo {
 
     }
 
+//
+    //
 
 
+    @Override
+    public String toString() {
+        return "TriangoloRettangolo{" +
+                "nome='" + nome + '\'' +
+                ", lunghezzaCateto1=" + lunghezzaCateto1 +
+                ", lunghezzaCateto2=" + lunghezzaCateto2 +
+                ", lunghezzaIpotenusa=" + lunghezzaIpotenusa +
+                '}';
+    }
 }

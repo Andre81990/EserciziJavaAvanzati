@@ -8,23 +8,26 @@ public class SmartphonePrice implements Cloneable {
     public double priceInEuros;
 
 
+
     @Override
-    public SmartphonePrice clone() {
+    public SmartphonePrice clone() throws  CloneNotSupportedException {
         try
     {
-
         /*
-        * a clonedSmartphonePriceviene generato utilizzandosuper.clone()
+        * a clonedSmartphonePrice viene generato utilizzando super.clone()
         *  il valore restituito è un SmartphonePriceoggetto
         * */
         //seconda implementazione del metodo clone
         return (SmartphonePrice)super.clone();}
         //clonedSmartphonePrice
 
-
         catch(CloneNotSupportedException e)
     {
+        e.printStackTrace();
+
         return null;
+
+
     }
 }
     //tostring

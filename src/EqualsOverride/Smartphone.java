@@ -2,14 +2,21 @@ package EqualsOverride;
 
 import java.lang.management.ClassLoadingMXBean;
 import java.util.Objects;
+//equals
+//hashcode
+//tostring
+
 
 public class Smartphone implements Cloneable {
 
     private String brandName;
     private String modelName;
     private int batterymAh;
+
+
     public SmartphonePrice producerPrice;
     public static SmartphonePrice retailPrice;
+
 
 
     public Smartphone(String brandName, String modelName, int batterymAh,
@@ -54,9 +61,12 @@ public class Smartphone implements Cloneable {
     //[usando IntelliJ] un override di hashCode(),
     // usando tutti i 5 attributi
     /*
+
     * Tale metodo fornisce un codice hash dell’oggetto ed è
     *  pensato per fornire supporto alla
     * gestione delle strutture dati
+
+    hash --->
     *  di tipo hash table come ad esempio java.util.Hashtable
     *
     * La sua implementazione di default sostanzialmente non
@@ -64,8 +74,14 @@ public class Smartphone implements Cloneable {
     *  mappare l’indirizzo dell’area di memoria
     * dove l’oggetto è allocato con un intero (univoco).
     * */
+
+
+
+    //dice cosa andare a prendere
+    //
     @Override
     public int hashCode() {
+
         return Objects.hash(brandName, modelName,
                 batterymAh, producerPrice,
                 retailPrice);
@@ -75,24 +91,25 @@ public class Smartphone implements Cloneable {
     public Smartphone clone() throws CloneNotSupportedException {
 
         try {
-
             //cast
             //implementazione del metodo clone
+
             Smartphone SmartphoneClonato = (Smartphone) super.clone();
 
             //assegnamento
             SmartphoneClonato.producerPrice = producerPrice.clone();
 
-            Smartphone.retailPrice = retailPrice.clone();
+            SmartphoneClonato.retailPrice = retailPrice.clone();
 
             return SmartphoneClonato;
 
         } catch //CloneNotSupportedException e
         (Exception e) {
 
+            e.printStackTrace();
             return null;
-
         }
+
     }
 }
 

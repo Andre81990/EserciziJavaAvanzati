@@ -30,6 +30,7 @@ public class Smartphone implements Cloneable {
         this.retailPrice = retailPrice;
     }
 //TOtring
+
     @Override
     public String toString() {
         return "Smartphone{" +

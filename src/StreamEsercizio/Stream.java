@@ -1,4 +1,4 @@
-package SpiegazioniAdvanced;
+package StreamEsercizio;
 
 public class Stream {
     /*

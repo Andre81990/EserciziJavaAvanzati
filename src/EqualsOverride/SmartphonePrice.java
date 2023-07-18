@@ -17,6 +17,7 @@ public class SmartphonePrice implements Cloneable {
         * a clonedSmartphonePrice viene generato utilizzando super.clone()
         *  il valore restituito è un SmartphonePriceoggetto
         * */
+
         //seconda implementazione del metodo clone
         return (SmartphonePrice)super.clone();}
         //clonedSmartphonePrice

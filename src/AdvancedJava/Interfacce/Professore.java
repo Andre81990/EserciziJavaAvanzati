@@ -1,6 +1,6 @@
 package AdvancedJava.Interfacce;
 
-public class Professore extends  CollegePerson implements TeachingPerson {
+public class Professore extends CollegePerson implements TeachingPerson {
 
 
 

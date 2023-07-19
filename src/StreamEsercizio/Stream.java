@@ -18,13 +18,16 @@ public class Stream {
      *
      *  Operazioni intermedie, come filter(), map() e sorted(), trasformano il flusso e restituiscono un nuovo flusso
      *
+     *
+     *
      * Le operazioni del terminale, come forEach(), collect() e reduce(), consumano il flusso e producono un risultato o un effetto collaterale.
      *
      *
      *  I flussi Java forniscono un modo elegante e conciso per eseguire la manipolazione e l'elaborazione dei dati
      *
-     *
+     *LEZIONE GREG
      * */
+
 
 
 }

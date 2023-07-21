@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class Streaming {
 
     /*
-    *  operatore   :: si usa per l invocazione di un metodo
+    *  operatore  :: si usa per l invocazione di un metodo
     * NomeClasse::nomeMetodo
 oggetto::nomeMetodo
 *
@@ -43,10 +43,10 @@ NomeClasse::new
          * trasformati ed elaborati senza modificare la raccolta originale
          *
          *
-         * possono essere creati da o i metodi factory statici nella classe Stream
-         * o i metodi stream() o parallelStream() forniti dall'interfaccia Collection
-         *
-         *
+         * possono essere creati da o
+         * i metodi factory statici nella classe Stream
+         * o i metodi stream() o
+         * parallelStream() forniti dall'interfaccia Collection
          *
          *  Operazioni intermedie,
          *  come filter(), map() e sorted(), trasformano il flusso e restituisce un nuovo flusso
@@ -54,10 +54,10 @@ NomeClasse::new
          *
          */
 
-        System.out.println("Operazioni intermedie:");
-List<Integer> num= Arrays.asList(2,34,56);
+        System.out.println("Operazioni intermedie List:");
+List<Integer> num= Arrays.asList(2,34,56,-45);
 //da interi a stream
-Stream<Integer> res=num.stream().filter(x->x>0);
+Stream<Integer> res=num.stream().filter(x->x<0);
 res.forEach(System.out::println);
 
         System.out.println("Operazioni intermedie MAP:");
@@ -73,15 +73,15 @@ res.forEach(System.out::println);
          * Le operazioni del terminale,(return il risultato cercato)
          *  come forEach(), collect() e reduce(), consumano il flusso e producono un risultato o un effetto collaterale.
          *
-         *.stream:trasformi in uno stream
-         * .collect= trasf in una collezione
+         * .stream: trasformi in uno stream
+         * .collect: trasf in una collezione
          *
-         *  I flussi Java forniscono un modo elegante e conciso per eseguire la manipolazione e l'elaborazione dei dati
+         * I flussi Java forniscono un modo elegante e conciso per eseguire la manipolazione e l'elaborazione dei dati
          *
          *
          * */
-
-        // Stream<Integer> stream=Stream.of(1,2,3,4,5,6,7);
+System.out.println("operazioni terminale:");
+         Stream<Integer> stream=Stream.of(1,2,3,4,5,6,7);
 
 
         //COME CREARE GLI STREAM
@@ -89,12 +89,13 @@ res.forEach(System.out::println);
 
         //stream di stringhe
         System.out.println("stream di stringhe");
+
         Stream<String> buildervero = Stream.<String>builder().add("lun").add("mart").build();
-        buildervero.forEach(p -> System.out.println(p));
+       // buildervero.forEach(p -> System.out.println(p));
 
-//System.out.println(buildervero.collect(Collectors.toList()));
+System.out.println(buildervero.collect(Collectors.toList()));
 
-
+System.out.println("iterato da 1 a 10:");
         List<Integer> l = new ArrayList<Integer>();
         for (int i = 1; i <= 10; i++) {
             l.add(i);

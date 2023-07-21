@@ -2,6 +2,7 @@ package StreamEsercizio;
 
 public class Stream {
     /*
+
      * Java Streams è una potente funzionalità introdotta in Java 8 che fornisce un approccio
      * semplificato e funzionale per elaborare raccolte di dati.
      *
